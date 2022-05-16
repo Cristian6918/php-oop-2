@@ -1,5 +1,4 @@
 <?php
-
 class Product
 {
     public $name;
@@ -25,8 +24,12 @@ class Product
     {
         $this->prod_for = $_prod_for;
     }
+    function setId($_id)
+    {
+        $this->id = $_id;
+    }
 }
-
+//Food for Animals
 class Food extends Product
 {
     public $taste_of;
@@ -43,6 +46,7 @@ class Food extends Product
         $this->weight = $_weight;
     }
 };
+//Toys for animals
 class Toy extends Product
 {
     public $type;
@@ -53,7 +57,7 @@ class Toy extends Product
         $this->type = $_type;
     }
 }
-
+//Accessories for animals
 class Accessories extends Product
 {
     public $object;
@@ -67,9 +71,3 @@ class Accessories extends Product
         $this->type = $_object;
     }
 }
-
-$mensola = new Toy('Ciao', 12, 'animali');
-
-echo ('<pre>');
-var_dump($mensola);
-echo ('</pre>');
